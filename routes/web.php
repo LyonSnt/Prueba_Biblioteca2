@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('foo', function () {
+    return 'Hola esto es una prueba';
+});
+
+Route::get('permiso', 'PermisoController@index');
+//Route::view('permiso', 'permiso');
+
+Route::get('admin/sistema/permiso', 'PermisoController@index')->name('permiso');
